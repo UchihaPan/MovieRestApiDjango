@@ -19,10 +19,10 @@ class moviedata(models.Model):
         (CRIME, 'CRIME'),
 
     ]
-    name = models.CharField(max_length=255, unique=True,blank=False)
+    name = models.CharField(max_length=255, unique=True, blank=False)
     ratings = models.DecimalField(max_digits=2, decimal_places=1)
-    runtime = models.IntegerField(max_length=2,default=3)
-    movie_type = models.CharField(max_length=255, choices=MOVIE_TYPES,default='ACTION')
+    runtime = models.IntegerField(max_length=2, default=3)
+    movie_type = models.CharField(max_length=255, choices=MOVIE_TYPES, default='ACTION')
 
     def __str__(self):
         return self.name
