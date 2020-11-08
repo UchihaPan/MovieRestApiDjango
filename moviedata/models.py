@@ -21,7 +21,7 @@ class moviedata(models.Model):
     ]
     name = models.CharField(max_length=255, unique=True, blank=False)
     ratings = models.DecimalField(max_digits=2, decimal_places=1)
-    runtime = models.IntegerField(max_length=2, default=3)
+    runtime = models.DecimalField(max_digits=2, decimal_places=1,default=1.0)
     movie_type = models.CharField(max_length=255, choices=MOVIE_TYPES, default='ACTION')
     image=models.ImageField(upload_to='images/',blank=True)
 
