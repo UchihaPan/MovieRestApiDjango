@@ -23,6 +23,7 @@ class moviedata(models.Model):
     ratings = models.DecimalField(max_digits=2, decimal_places=1)
     runtime = models.DecimalField(max_digits=2, decimal_places=1,default=1.0)
     movie_type = models.CharField(max_length=255, choices=MOVIE_TYPES, default='ACTION')
+    review=models.TextField(max_length=1000,blank=True)
     image=models.ImageField(upload_to='images/',blank=True)
 
     def __str__(self):
